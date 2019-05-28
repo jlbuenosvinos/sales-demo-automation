@@ -1,0 +1,8 @@
+- name: Sales Application Init
+  hosts: bastion
+  gather_facts: false
+  tasks:
+    - name: openShift sales-init
+      args:
+        warn: false
+      command: oc start-build sales-init-pipeline -n cicd-ocpadmin --wait

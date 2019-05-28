@@ -1,0 +1,8 @@
+- name: Perform an OpenShift login
+  hosts: bastion
+  gather_facts: false
+  tasks:
+    - name: openShift login
+      args:
+        warn: false
+      command: oc login {{ctti_ocp_url}} --token={{ctti_ocp_token}}

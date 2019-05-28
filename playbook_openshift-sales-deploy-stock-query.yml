@@ -1,0 +1,8 @@
+- name: Sales Application Stock Query Service
+  hosts: bastion
+  gather_facts: false
+  tasks:
+    - name: openShift sales-stock-query
+      args:
+        warn: false
+      command: oc start-build sales-deploy-stock-query-pipeline -n cicd-ocpadmin --wait
