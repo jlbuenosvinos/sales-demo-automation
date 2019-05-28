@@ -1,0 +1,8 @@
+- name: Sales Demo Application Login
+  hosts: bastion
+  gather_facts: false
+  tasks:
+    - name: openShift login
+      args:
+        warn: false
+      command: ls -la
