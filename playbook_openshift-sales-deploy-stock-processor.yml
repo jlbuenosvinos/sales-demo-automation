@@ -1,8 +1,8 @@
-- name: Sales Application Stock Processor Service
+- name: Sales Demo Application Stock Processor Service
   hosts: bastion
   gather_facts: false
   tasks:
     - name: openShift sales-stock-processor
       args:
         warn: false
-      command: oc start-build sales-deploy-stock-processor-pipeline -n cicd-ocpadmin --wait
+      command: oc start-build sales-deploy-stock-processor-pipeline -n devops-tools --wait

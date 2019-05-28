@@ -1,8 +1,8 @@
-- name: Sales Application Infra
+- name: Sales Demo Application Infra
   hosts: bastion
   gather_facts: false
   tasks:
     - name: openShift sales-infra
       args:
         warn: false
-      command: oc start-build sales-infra-pipeline -n cicd-ocpadmin --wait
+      command: oc start-build sales-infra-pipeline -n devops-tools --wait

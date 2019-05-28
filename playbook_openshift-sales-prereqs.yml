@@ -1,8 +1,8 @@
-- name: Sales Application Pre-reqs
+- name: Sales Demo Application Pre-reqs
   hosts: bastion
   gather_facts: false
   tasks:
     - name: openShift sales-prereqs
       args:
         warn: false
-      command: oc start-build sales-prereqs-pipeline -n cicd-ocpadmin --wait
+      command: oc start-build sales-prereqs-pipeline -n devops-tools --wait

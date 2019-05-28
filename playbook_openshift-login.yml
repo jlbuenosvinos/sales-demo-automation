@@ -1,8 +1,8 @@
-- name: Perform an OpenShift login
+- name: Sales Demo Application Login
   hosts: bastion
   gather_facts: false
   tasks:
     - name: openShift login
       args:
         warn: false
-      command: oc login {{ctti_ocp_url}} --token={{ctti_ocp_token}}
+      command: oc login {{sales_demo_ocp_url}} --token={{sales_demo_ocp_token}}
