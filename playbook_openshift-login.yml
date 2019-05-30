@@ -5,4 +5,4 @@
     - name: openShift login
       args:
         warn: false
-        command: oc login https://master.barcelona-e984.openshiftworkshop.com:443 --token=iIjjy-eIV1GHQlQISjkKWo6-WJsT7B1YB_q8ghp_s4E
+      command: oc login https://master.barcelona-e984.openshiftworkshop.com:443 --token=iIjjy-eIV1GHQlQISjkKWo6-WJsT7B1YB_q8ghp_s4E
