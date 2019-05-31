@@ -1,0 +1,8 @@
+- name: Sales Demo Application Infra
+  hosts: bastion
+  gather_facts: false
+  tasks:
+    - name: openShift build template
+      args:
+        warn: false
+      command: oc start-build {{build_name}} -n devops-tools --wait

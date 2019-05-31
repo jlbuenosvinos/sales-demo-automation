@@ -5,4 +5,4 @@
     - name: openShift login
       args:
         warn: false
-      command: ls -la
+      command: oc login {{sales_demo_ocp_url}} --token={{sales_demo_ocp_token}}
