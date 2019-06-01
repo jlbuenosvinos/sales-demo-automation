@@ -5,4 +5,4 @@
     - name: openShift sales-stock-processor
       args:
         warn: false
-      command: oc start-build sales-deploy-stock-processor-pipeline -n devops-tools --wait
+      command: oc start-build sales-deploy-stock-processor-pipeline -n devops-tools -e STOCK_PROCESSOR_SERVICE_VERSION={{project_version}} --wait

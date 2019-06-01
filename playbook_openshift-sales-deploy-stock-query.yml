@@ -5,4 +5,4 @@
     - name: openShift sales-stock-query
       args:
         warn: false
-      command: oc start-build sales-deploy-stock-query-pipeline -n devops-tools --wait
+      command: oc start-build sales-deploy-stock-query-pipeline -n devops-tools -e STOCK_QUERY_SERVICE_VERSION={{project_version}} --wait
