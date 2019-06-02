@@ -1,0 +1,8 @@
+- name: Telegram Notifier
+  hosts: bastion
+  gather_facts: false
+  tasks:
+    - name: Telegram message sender
+      args:
+        warn: false
+      command: ls -la
