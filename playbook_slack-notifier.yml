@@ -1,0 +1,10 @@
+- name: Slack Notifier
+  hosts: bastion
+  gather_facts: false
+  tasks:
+    - name: Send notification message via Slack all options
+      slack:
+        token: {{ slack_token }}
+        msg: 'sales-demo-app version {{ project_version }} has been installed.'
+        channel: '#devopsbcn'
+      delegate_to: bastion
