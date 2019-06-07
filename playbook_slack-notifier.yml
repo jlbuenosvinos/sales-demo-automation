@@ -5,7 +5,6 @@
     - name: Send notification message via Slack all options
       slack:
         token: "{{ slack_token }}"
-#        msg: "sales-demo-app version {{ project_version }} has been installed."
         msg: "[{{ project_version }}] @ {{ slack_msg }}"
         channel: '#devopsbcn'
         icon_url: https://devops.barcelona/2019/assets/img/devops-long-logo-dark-bg@2x.png
