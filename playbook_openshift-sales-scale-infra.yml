@@ -1,0 +1,8 @@
+- name: Sales Demo Infra Scale
+  hosts: bastion
+  gather_facts: false
+  tasks:
+    - name: openShift infra scale
+      args:
+        warn: false
+      command: oc start-build sales-scale-infra-pipeline -n devops-tools -e SERVICE_NAME={{service_name}} -e SERVICE_REPLICAS={{service_replicas}} --wait
