@@ -1,0 +1,8 @@
+- name: Sales Demo Service Scale
+  hosts: bastion
+  gather_facts: false
+  tasks:
+    - name: openShift service autoscale
+      args:
+        warn: false
+      command: oc start-build sales-autoscale-service-pipeline -n devops-tools -e SERVICE_VERSION={{project_version}} -e SERVICE_NAME={{service_name}} -e SERVICE_REPLICAS_MIN={{service_replicas_min}} -e SERVICE_REPLICAS_MAX={{service_replicas_max}} -e SERVICE_CPU={{service_cpu}} --wait
