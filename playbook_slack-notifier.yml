@@ -1,4 +1,5 @@
 - name: Slack Notifier
+  hosts: bastion
   gather_facts: false
   tasks:
     - name: Send notification message via Slack
@@ -6,5 +7,5 @@
         token: "{{ slack_token }}"
         msg: "[{{ project_version }}] @ {{ slack_msg }}"
         channel: '{{ slack_channel }}'
-      delegate_to: localhost
+      delegate_to: bastion
 
