@@ -7,5 +7,5 @@
         token: "{{ slack_token }}"
         msg: "[{{ project_version }}] @ {{ slack_msg }}"
         channel: '{{ slack_channel }}'
-      delegate_to: bastion
+
 
